@@ -1,0 +1,2 @@
+import './globals.css'; import Link from 'next/link';
+export default function Layout({children}:{children:React.ReactNode}){return <div className="shell"><aside className="side"><div className="brand">Gunashree Digital</div><nav className="nav"><Link href="/">Dashboard</Link><Link href="/templates">Templates</Link><Link href="/editor">Design Editor</Link><Link href="/media">Media Library</Link><Link href="/users">Users</Link><Link href="/settings">Settings</Link></nav></aside><main className="main">{children}</main></div>}

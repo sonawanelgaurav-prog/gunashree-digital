@@ -1,0 +1,16 @@
+{
+  "name":"gunashree-digital-platform",
+  "private":true,
+  "workspaces":["apps/admin","apps/api"],
+  "scripts":{
+    "install:all":"npm install",
+    "db:generate":"npm --workspace apps/api run db:generate",
+    "db:push":"npm --workspace apps/api run db:push",
+    "dev:api":"npm --workspace apps/api run dev",
+    "dev:admin":"npm --workspace apps/admin run dev",
+    "dev":"concurrently -k -n API,ADMIN -c blue,green \"npm run dev:api\" \"npm run dev:admin\"",
+    "build":"npm --workspace apps/api run build && npm --workspace apps/admin run build",
+    "start":"npm --workspace apps/api run start & npm --workspace apps/admin run start"
+  },
+  "devDependencies":{"concurrently":"^9.1.2"}
+}

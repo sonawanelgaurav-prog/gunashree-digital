@@ -1,0 +1,1 @@
+export default function Users(){return <><h1>Users</h1><div className="card"><p>User management API is ready. Connect this screen to <code>/api/designs?all=1</code> and a paginated users endpoint when production permissions are configured.</p></div></>}

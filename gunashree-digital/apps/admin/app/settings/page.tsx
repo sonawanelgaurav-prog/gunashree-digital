@@ -1,0 +1,1 @@
+export default function Settings(){return <><h1>Settings</h1><div className="card form"><label>App name<input defaultValue="Gunashree Digital"/></label><label>Developer<input defaultValue="Gunashree Digital"/></label><label>API URL<input defaultValue={process.env.NEXT_PUBLIC_API_URL||'http://localhost:4000'}/></label><button className="btn">Save Settings</button></div></>}

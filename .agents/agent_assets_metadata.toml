@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "kqDUpA1x5ZePLAkmR9Bny"
+uri = "file://gunashree-digital/apps/mobile/build/app/outputs/flutter-apk/app-release.apk"
+type = "unspecified"
+title = "Gunashree Digital release APK"
+description = "Release APK built successfully for Android."

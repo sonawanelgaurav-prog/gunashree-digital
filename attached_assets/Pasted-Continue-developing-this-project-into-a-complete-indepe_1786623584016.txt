@@ -1,0 +1,58 @@
+Continue developing this project into a complete independent Gunashree Digital design app.
+
+Do NOT just explain the project. Actually modify and build the project.
+
+Our immediate priority is to create the Android APK first.
+
+Requirements:
+
+1. Keep the existing Next.js admin dashboard, Express/TypeScript API, PostgreSQL/Prisma structure and Flutter mobile app.
+2. Make the Flutter mobile app fully runnable and prepare it for Android APK build.
+3. App branding:
+   - App name: Gunashree Digital
+   - Developer: Gunashree Digital
+   - Use Gunashree Digital branding/logo where applicable.
+4. Create a professional mobile home screen with:
+   - Categories
+   - Templates
+   - My Designs
+   - Profile
+   - Search
+   - Recent designs
+5. Create a working template system.
+6. Create a basic working poster editor:
+   - Add/edit text
+   - Upload photo
+   - Upload logo
+   - Move elements
+   - Resize elements
+   - Change font size
+   - Change text color
+   - Background
+   - Save design
+7. Support poster sizes:
+   - 1:1
+   - 4:5
+   - 9:16
+8. Admin dashboard must allow:
+   - Login
+   - Add categories
+   - Upload poster templates
+   - Upload images
+   - Upload logos
+   - Manage templates
+   - Publish/unpublish templates
+   - Define editable fields such as NAME, BUSINESS_NAME, MOBILE, PHOTO and LOGO.
+9. Connect the Flutter app to the API so published templates can appear in the app.
+10. Add database migrations and seed data.
+11. Add proper environment configuration.
+12. Fix all build errors and dependency errors.
+13. Make the project production-oriented and maintainable.
+14. Do not copy Design 11/23 source code or copyrighted assets. Use it only as functional inspiration and build an independent implementation.
+
+Most importantly:
+- First make the Flutter Android project compile successfully.
+- Then build a release APK.
+- If Replit cannot directly build the APK, prepare the complete Flutter project and provide exact commands/files needed to build the APK elsewhere.
+- Do not stop at documentation. Implement as much as possible.
+- After completing the work, tell me exactly what was changed, what is working, and whether an APK was successfully generated.

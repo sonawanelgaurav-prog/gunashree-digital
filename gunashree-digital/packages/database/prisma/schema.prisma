@@ -1,0 +1,58 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+
+enum Role { ADMIN USER }
+enum TemplateStatus { DRAFT PUBLISHED ARCHIVED }
+model User {
+  id String @id @default(cuid())
+  name String
+  phone String @unique
+  email String? @unique
+  passwordHash String?
+  role Role @default(USER)
+  createdAt DateTime @default(now())
+  designs Design[]
+}
+model Category {
+  id String @id @default(cuid())
+  name String
+  slug String @unique
+  coverUrl String?
+  templates Template[]
+}
+model Template {
+  id String @id @default(cuid())
+  title String
+  slug String @unique
+  thumbnailUrl String?
+  backgroundUrl String?
+  width Int @default(1080)
+  height Int @default(1350)
+  status TemplateStatus @default(DRAFT)
+  categoryId String?
+  category Category? @relation(fields: [categoryId], references: [id])
+  schema Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  designs Design[]
+}
+model Design {
+  id String @id @default(cuid())
+  name String
+  outputUrl String?
+  data Json
+  userId String
+  templateId String?
+  user User @relation(fields: [userId], references: [id])
+  template Template? @relation(fields: [templateId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Media {
+  id String @id @default(cuid())
+  filename String
+  url String
+  mimeType String
+  size Int
+  createdAt DateTime @default(now())
+}

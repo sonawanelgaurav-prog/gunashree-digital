@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: gunashree
+      POSTGRES_PASSWORD: gunashree
+      POSTGRES_DB: gunashree_digital
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+  api:
+    build: ./apps/api
+    environment:
+      DATABASE_URL: postgresql://gunashree:gunashree@db:5432/gunashree_digital
+      JWT_SECRET: change-this-in-production
+      PORT: 4000
+      UPLOAD_DIR: /app/uploads
+    ports: ["4000:4000"]
+    volumes:
+      - ./storage/uploads:/app/uploads
+    depends_on: [db]
+volumes:
+  pgdata:
