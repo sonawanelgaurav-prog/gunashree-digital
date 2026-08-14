@@ -1,0 +1,5 @@
+ALTER TABLE "Category"
+ADD COLUMN "isActive" BOOLEAN NOT NULL DEFAULT true;
+
+ALTER TABLE "Media"
+ADD COLUMN "storagePath" TEXT;

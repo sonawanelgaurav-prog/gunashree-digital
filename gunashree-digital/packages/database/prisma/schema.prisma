@@ -18,6 +18,7 @@ model Category {
   name String
   slug String @unique
   coverUrl String?
+  isActive Boolean @default(true)
   templates Template[]
 }
 model Template {
@@ -52,6 +53,7 @@ model Media {
   id String @id @default(cuid())
   filename String
   url String
+  storagePath String?
   mimeType String
   size Int
   createdAt DateTime @default(now())
